@@ -2,6 +2,11 @@ __author__ = 'kosttek'
 
 from logmetric import SequenceMatcher
 import re
+import datetime
+from databaseSchema import Tag, RawLog, CompressedLog
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+import databaseSchema
 
 class CompressLog():
     '''[tag][log]->logdictdata'''
@@ -9,49 +14,86 @@ class CompressLog():
     compare_ration = 0.5
 
     def __init__(self):
-        self.logdict=dict()
+        self.taglist=list()
 
     def add(self,rawlog):
-        [tag,log] = self.parseLog(rawlog)
+        [tag_str,log,date] = self.parseLog(rawlog)
 
         #if rawlog is not log but kind of --------begining of /dev/logsystem
-        if tag == None:
+        if tag_str == None:
             return
 
         log = self.removeNumsAfterEqualityChar(log)
 
         #find tag
-        if self.logdict.has_key(tag):
-            tag_dict = self.logdict[tag]
-        else:
-            tag_dict = dict()
-            self.logdict[tag]=tag_dict
+        tag_obj = self.checkIfTagExistAndReturn(tag_str)
+        if tag_obj == None:
+            tag_obj = self.createNewTag(tag_str)
 
         # check logs for same
-        for key in tag_dict.iterkeys():
+        for key_compressedlog in tag_obj.compressedlogs:
+            key = key_compressedlog.clogname
             seq = SequenceMatcher(key,log)
             if seq.ratio() >= CompressLog.compare_ration:
-                logDictData = tag_dict[key]
-                isSame = logDictData.compare(seq.different_words)
+                isSame = key_compressedlog.compareAndAddDifferences(seq.different_words)
                 if isSame :
-                    logDictData.incrementCount()
+                    #todo save to database rawlog or add
+                    key_compressedlog.rawlogs.append(RawLog(log=log,date=date))
                     return # end of comparing
 
         # if not found same create new log
-        tag_dict[log]=LogDictData()
+        new_clog = CompressedLog(log)
+        new_clog.rawlogs.append(RawLog(log=log,date=date))
+        tag_obj.compressedlogs.append(new_clog)
+
+    # None if do not
+    def checkIfTagExistAndReturn(self,tag):
+        for tag_obj in self.taglist:
+            if tag_obj.tagname == tag:
+                return tag_obj
+        return None
+        #return self.logdict.has_key(tag)
+
+    #def getTagsCommpressedLogs(self,tag):
+    #    #return  self.logdict[tag]
+
+    def createNewTag(self,tag):
+        tag_obj = Tag(tag)
+        self.taglist.append(tag_obj)
+        return tag_obj
+
 
     def parseLog(self,log):
+        '''
+        03-28 15:43:19.225 W/ActivityManager(  341): Unable to start service Intent { cmp=com.aware/.Applications }: not found
+        '''
         log_words_tag = log.split(":",3)
         #remorve begining buffers token
         if len(log_words_tag) == 1:
-            return [None,None]
+            return [None,None,None]
 
         log = log_words_tag[3].rstrip('\n').rstrip('\r')
 
-        tag_temp = log_words_tag[2].split(' ',1)[1]
+        sec_and_tag = log_words_tag[2].split(' ',1);
+        tag_temp = sec_and_tag[1]
         tag = tag_temp[:tag_temp.index('(')]
 
-        return [tag,log]
+        date = self.getDate(log_words_tag[0],log_words_tag[1],sec_and_tag[0])
+
+        return [tag,log,date]
+
+    year = 2014
+    def getDate(self,date_hour, minutes, sec_milisec):
+        '''
+        03-28 15:43:19.225
+        ['03-28 15', '43', '19.225']
+        '''
+        year = CompressLog.year
+        [month_day,hour]=date_hour.split(" ")
+        [month,day]=month_day.split("-")
+        [sec,milisec]=sec_milisec.split(".")
+
+        return datetime.datetime(year,int(month),int(day),int(hour),int(minutes),int(sec),int(milisec))
 
     def removeNumsAfterEqualityChar(self,log):
         '''replace every number witch start with '=' sign by '='(secound argument) or '|' all brackets {} with numbers in it separated by commma ',' '''
@@ -60,26 +102,26 @@ class CompressLog():
 
 
 
-class LogDictData():
-    def __init__(self):
-        self.diffwordsset = None
-        self.count = 1
-
-    # def __init__(self,set):
-    #     self.diffwordsset = set
-    #     self.incrementCount() # 2?
-
-    def incrementCount(self):
-        self.count +=1
-
-    def compare(self,set):
-        if self.diffwordsset == None:
-            self.diffwordsset = set
-            return True
-        elif self.diffwordsset == set:
-            return True
-        else:
-            return False
+# class LogDictData():
+#     def __init__(self):
+#         self.diffwordsset = None
+#         self.count = 1
+#
+#     # def __init__(self,set):
+#     #     self.diffwordsset = set
+#     #     self.incrementCount() # 2?
+#
+#     def incrementCount(self):
+#         self.count +=1
+#
+#     def compare(self,set):
+#         if self.diffwordsset == None:
+#             self.diffwordsset = set
+#             return True
+#         elif self.diffwordsset == set:
+#             return True
+#         else:
+#             return False
 
 if __name__ == "__main__":
     compres = CompressLog()
@@ -87,13 +129,19 @@ if __name__ == "__main__":
     f = open("../logs/logcatlogs",'r')
 
     for i in range(0,10000):
-        try:
-            line = f.readline()
-            compres.add(line)
-        except:
-            print line
+        line = f.readline()
+        compres.add(line)
 
-    for tag , tagval in compres.logdict.iteritems():
+    for tag  in compres.taglist:
         print tag
-        for log,val in tagval.iteritems():
-            print " ",val.count, val.diffwordsset, log
+        for clog in tag.compressedlogs:
+            print " ",len(clog.rawlogs), clog.diffwords, clog.clogname
+
+    engine = create_engine('sqlite:///testdb/testlogs.db', echo=True)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    databaseSchema.Base.metadata.create_all(engine)
+
+    for tag in compres.taglist:
+        session.add(tag)
+    session.commit()

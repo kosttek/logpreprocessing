@@ -16,7 +16,7 @@ class User(Base):
     name = Column(String)
     fullname = Column(String)
     password = Column(String)
-    addresses = relationship("Address", order_by="Address.id", backref="user")
+    addresses = relationship("Address",cascade="all", order_by="Address.id", backref="user")
     def __repr__(self):
        return "<User(name='%s', fullname='%s', password='%s')>" % (
                             self.name, self.fullname, self.password)
@@ -26,7 +26,7 @@ class User(Base):
 
 class Address(Base):
     __tablename__ = 'addresses'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, Sequence('addres_seq_id'), primary_key=True)
     email_address = Column(String, nullable=False)
     user_id = Column(Integer, ForeignKey('users.id'))
     #user = relationship("User", backref=backref('addresses', order_by=id))
@@ -40,12 +40,12 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
 
-    jack = User(name='jack', fullname='Jack Bean', password='gjffdd')
+    jack = User(id = 1,name='jack', fullname='Jack Bean', password='gjffdd')
     jack.addresses = [
-                Address(email_address='jack@google.com'),
-                Address(email_address='j25@yahoo.com')]
+                Address(email_address='jacky@google.com')
+                ]
 
-    session.add(jack)
+    session.merge(jack.addresses[0])
     session.commit()
 
     jack2 = session.query(User).filter_by(name='jack').first()
