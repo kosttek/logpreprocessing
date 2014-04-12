@@ -23,6 +23,7 @@ class CompressLog():
         if tag_str == None:
             return
 
+        #raw logs alre without numbers
         log = self.removeNumsAfterEqualityChar(log)
 
         #find tag
@@ -37,7 +38,7 @@ class CompressLog():
             if seq.ratio() >= CompressLog.compare_ration:
                 isSame = key_compressedlog.compareAndAddDifferences(seq.different_words)
                 if isSame :
-                    #todo save to database rawlog or add
+                    key_compressedlog.clogname = self.replaceDiffWordsWithSigns(log,seq.different_words,"@@@")
                     key_compressedlog.rawlogs.append(RawLog(log=log,date=date))
                     return # end of comparing
 
@@ -52,16 +53,17 @@ class CompressLog():
             if tag_obj.tagname == tag:
                 return tag_obj
         return None
-        #return self.logdict.has_key(tag)
-
-    #def getTagsCommpressedLogs(self,tag):
-    #    #return  self.logdict[tag]
 
     def createNewTag(self,tag):
         tag_obj = Tag(tag)
         self.taglist.append(tag_obj)
         return tag_obj
 
+    def replaceDiffWordsWithSigns(self,log,diffset,sign):
+        splitedlog = log.split(" ")
+        for index in diffset:
+            splitedlog[index] = sign
+        return " ".join(splitedlog)
 
     def parseLog(self,log):
         '''
@@ -102,26 +104,6 @@ class CompressLog():
 
 
 
-# class LogDictData():
-#     def __init__(self):
-#         self.diffwordsset = None
-#         self.count = 1
-#
-#     # def __init__(self,set):
-#     #     self.diffwordsset = set
-#     #     self.incrementCount() # 2?
-#
-#     def incrementCount(self):
-#         self.count +=1
-#
-#     def compare(self,set):
-#         if self.diffwordsset == None:
-#             self.diffwordsset = set
-#             return True
-#         elif self.diffwordsset == set:
-#             return True
-#         else:
-#             return False
 
 if __name__ == "__main__":
     compres = CompressLog()

@@ -1,0 +1,1 @@
+select  count(rl.clog_id) as cc, cl.clogname, cl.diffwords from rawlogs as rl join compressedlogs as cl on rl.clog_id = cl.id group by rl.clog_id order by cc desc;

@@ -45,9 +45,14 @@ if __name__ == "__main__":
                 Address(email_address='jacky@google.com')
                 ]
 
-    session.merge(jack.addresses[0])
+
+
+    session.add(jack.addresses[0])
+    jack.name = "jacek"
+    jack.addresses.append(Address(email_address='jacky@google.com'))
+    session.add(jack.addresses[1])
     session.commit()
 
-    jack2 = session.query(User).filter_by(name='jack').first()
-    jack.password='fucklogic'
-    print jack2.addresses[0].user
+    #jack2 = session.query(User).filter_by(name='jack').first()
+
+    #print jack2.addresses[0].user
