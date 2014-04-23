@@ -40,7 +40,7 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
 
-    jack = User(id = 1,name='jack', fullname='Jack Bean', password='gjffdd')
+    jack = User(name='jack', fullname='Jack Bean', password='gjffdd')
     jack.addresses = [
                 Address(email_address='jacky@google.com')
                 ]
@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     session.add(jack.addresses[0])
     jack.name = "jacek"
-    jack.addresses.append(Address(email_address='jacky@google.com'))
+    jack.addresses.append(Address(email_address='jacky2@google.com'))
     session.add(jack.addresses[1])
     session.commit()
 

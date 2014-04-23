@@ -1,4 +1,9 @@
-extendclog()
-removetag()
-removeclog()
-#group()
+extend(" Start proc @@@ for broadcast @@@ pid= uid= gids=")
+extend(" Start proc @@@ for service @@@ pid= uid= gids=")
+extend(" Start proc @@@ for content provider  @@@ pid= uid= gids=")
+#removetag("I/force_gc")
+#removetag("D/dalvikvm")
+
+#not working
+#removeclog()
+#group()#future work

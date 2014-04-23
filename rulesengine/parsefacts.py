@@ -7,7 +7,7 @@ class ParseFacts():
         self.knowledgelist = list()
 
     def commentedLine(self,line):
-        if line.lstrip()[0]=='#':
+        if  len(line.lstrip()) ==0 or line.lstrip()[0]=='#':
             return True
         return False
 
@@ -43,8 +43,10 @@ class ParseFacts():
         self.addFact(factname,args)
 
     def parseFile(self,filename):
-        #todo if praseline == None continue
-        pass
+        f = open(filename,'r')
+        for line in f.readlines():
+            self.parseLine(line)
+
 
     def addFact(self,factname,arguments):
         fact = Fact(factname,arguments)

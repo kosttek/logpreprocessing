@@ -34,6 +34,13 @@ class RuleEngine():
 
         return result
 
+    def checkTemplate(self,rawlog,factlist,getmethod):
+        for fact in factlist:
+            if fact.target.lstrip().rstrip() == getmethod(rawlog).rstrip().lstrip():
+                return True
+        return False
+
+
     def getCompressedLog(self,rawlog):
         time = rawlog.date
         logmessage = rawlog.clog.clogname
@@ -45,13 +52,27 @@ class RuleEngine():
         return [time,logmessage]
 
     def checkCompressedLog(self,rawlog,factlist):
-        for fact in factlist:
-            if fact.target == rawlog.clog.clogname:
-                return True
-        return False
+        return self.checkTemplate(rawlog,factlist,self.getClognameFromRawlog)
+
+    def checkTag(self,rawlog,factlist):
+        return self.checkTemplate(rawlog,factlist,self.getTagFromRawlog)
+
+    def getClognameFromRawlog(self,rawlog):
+        return rawlog.clog.clogname
+
+    def getTagFromRawlog(self,rawlog):
+        return rawlog.clog.tag.tagname
+
+#rules
 
     def extend_check(self,rawlog,factlist):
         return self.checkCompressedLog(rawlog,factlist)
 
     def extend(self,rawlog):
         return self.getRawLog(rawlog)
+
+    def removetag_check(self,rawlog,factlist):
+        return self.checkTag(rawlog,factlist)
+
+    def removetag(self,rawlog):
+        return None
