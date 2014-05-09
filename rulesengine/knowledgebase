@@ -1,9 +1,20 @@
 extend(" Start proc @@@ for broadcast @@@ pid= uid= gids=")
 extend(" Start proc @@@ for service @@@ pid= uid= gids=")
 extend(" Start proc @@@ for content provider  @@@ pid= uid= gids=")
+extend(" @@@")
+removeclog(" (t=)>> @@@")
+leavetagfromtag("D/ActivityThread")
+leavetagfromtag("E/AudioHardwareMSM8660")
+leavetagfromtag("I/AudioHardwareMSM8660")
+leavetagfromtag("D/AudioHardwareMSM8660")
+leavetagfromtag("E/Trace")
+leavetagfromtag("D/dalvikvm")
+leavetagfromtag("I/dalvikvm")
+leavetagfromtag("E/dalvikvm")
+
 #removetag("I/force_gc")
 #removetag("D/dalvikvm")
 
 #not working
-#removeclog()
+
 #group()#future work

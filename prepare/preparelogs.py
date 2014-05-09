@@ -10,6 +10,11 @@ import preparearff
 class PrepareLogsFromDB():
 
     def __init__(self,databasefile,knowledgebasefile):
+        """
+        Creates list of logs where element is [date,logmessage]
+        logs are filtered by rule enginge
+        there is also set of logs which helps creating arff later
+        """
         self.loglist = list()
         self.logset_list = list
         logset = set()
@@ -33,7 +38,7 @@ class PrepareLogsFromDB():
 
     def queryAllRawlogs(self,databasefile):
         '''databasefile = testlogs.db'''
-        engine = create_engine('sqlite:///../statisticlog/testdb/'+databasefile, echo=True)
+        engine = create_engine('sqlite:///'+databasefile, echo=True)
         Session = sessionmaker(bind=engine)
         session = Session()
         statisticlog.databaseSchema.Base.metadata.create_all(engine)
@@ -71,14 +76,29 @@ class PrepareLogsFromDB():
         index = self.logset_list.index(log[1])
         array[index] = True
 
+    def reduceLoglist(self,percent):
+        size = len(self.loglist)
+        new_size = int(percent*size)
+        new_loglist = self.loglist[:new_size]
+        new_set = set()
+        for log in new_loglist:
+            new_set.add(log[1])
+        self.loglist = new_loglist
+        self.logset_list = list(new_set)
+
 if __name__ == '__main__':
-    prepareLogs = PrepareLogsFromDB('testlogs.db','../rulesengine/knowledgebase')
-    for log in prepareLogs.logset_list:
-        print log
+    settings = dict()
+    settings["clog"]=["knowledgebase","one_day_logs"]
+    settings["tags"]=["kbtag","one_day_logs_tag"]
+
+    prepareLogs = PrepareLogsFromDB('testdb/testlogs.db','../rulesengine/'+settings['clog'][0])
+    #for log in prepareLogs.logset_list:
+    #    print log
+    #prepareLogs.reduceLoglist(0.2)
     prepareLogs.createLearningData(2)
-    for timew in prepareLogs.timewindowdata:
-        print timew
+    #for timew in prepareLogs.timewindowdata:
+    #    print timew
 
     _preparearff = preparearff.PrepareArff()
 
-    _preparearff.prepare_bool_association_file("one_day_logs",prepareLogs.logset_list,prepareLogs.timewindowdata)
+    _preparearff.prepare_bool_association_file(settings['clog'][1],prepareLogs.logset_list,prepareLogs.timewindowdata)

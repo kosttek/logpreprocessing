@@ -55,5 +55,7 @@ class ParseFacts():
 if __name__ == "__main__":
     pf = ParseFacts()
     pf.parseLine("extend(\"lol kind of shit\", \"arg nr 1\", \"arg nr 2\")")
+    pf.parseLine("extend(\"lol2\", \"arg nr 1\", \"arg nr 2\")")
+    pf.parseLine("extend(\"lol3 kind of shit\", \"arg nr 1\", \"arg nr 2\")")
     for fa in pf.knowledgelist:
         print fa.factname, fa.arglist

@@ -1,0 +1,8 @@
+###arff files
+*.arff
+*.arff~
+
+*.test
+
+###db
+*.db

@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 __author__ = 'kosttek'
 
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship, backref
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, UnicodeText
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy import Sequence
@@ -15,7 +16,7 @@ Base = declarative_base()
 class Tag(Base):
     __tablename__ = 'tag'
     id = Column(Integer,Sequence("tag_id_seq") ,primary_key=True)
-    tagname = Column(String, nullable=False, unique=True)
+    tagname = Column(UnicodeText, nullable=False, unique=True)
     compressedlogs = relationship("CompressedLog", order_by="CompressedLog.id", backref="tag")
 
     def __init__(self,tagname):
@@ -30,8 +31,8 @@ class Tag(Base):
 class CompressedLog(Base):
     __tablename__ = 'compressedlogs'
     id = Column(Integer,Sequence("compressedlog_id_seq"), primary_key=True)
-    clogname = Column(String, nullable=False)
-    diffwords = Column(String, nullable=False) # should be string kind of [3, 5, 6] json.dumps(list(diffwordset))
+    clogname = Column(UnicodeText, nullable=False)
+    diffwords = Column(UnicodeText, nullable=False) # should be string kind of [3, 5, 6] json.dumps(list(diffwordset))
     tag_id = Column(Integer, ForeignKey('tag.id'))
     rawlogs = relationship("RawLog", order_by="RawLog.id", backref="clog")
 
@@ -82,7 +83,7 @@ class CompressedLog(Base):
 class RawLog(Base):
     __tablename__ = 'rawlogs'
     id = Column(Integer,Sequence("rawlog_id_seq"), primary_key=True)
-    log = Column(String, nullable=False)
+    log = Column(UnicodeText, nullable=False)
     date = Column(DateTime, nullable=False)
     clog_id = Column(Integer, ForeignKey('compressedlogs.id'))
 

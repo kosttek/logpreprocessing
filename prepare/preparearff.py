@@ -1,6 +1,11 @@
+# -*- coding: latin-1 -*-
 __author__ = 'kosttek'
 
 class PrepareArff():
+
+    value_true="y"
+    value_empty="?"
+
     def prepare_bool_association_file(self, relation_name, variables_set, bool_data):
         f = open(relation_name+".arff","w")
         self.write_relation(f, relation_name)
@@ -15,13 +20,20 @@ class PrepareArff():
     @staticmethod
     def write_boolean_atributes(file_des,variables_set):
         file_des.write("\n")
+        PrepareArff.write_boolean_atributes_without_newline(file_des,variables_set)
+        #for var in variables_set:
+        #    PrepareArff.write_boolean_var(file_des,var)
+
+    @staticmethod
+    def write_boolean_atributes_without_newline(file_des,variables_set):
         for var in variables_set:
             PrepareArff.write_boolean_var(file_des,var)
+
 
     @staticmethod
     def write_boolean_var(file_des, var):
         var_filtered = PrepareArff.filterVar(var)
-        file_des.write("@attribute "+var_filtered+" {True,False}\n")
+        file_des.write(("@attribute "+var_filtered+" {"+PrepareArff.value_true+"}\n").encode('utf-8'))
 
     @staticmethod
     def filterVar(var):
@@ -46,9 +58,18 @@ class PrepareArff():
             PrepareArff.write_boolean_val_line(file_des,val_array)
 
     @staticmethod
-    def write_boolean_val_line(file_des,val_array):
+    def get_boolean_val_line(val_array):
         result = ""
         for bool_val in val_array:
-            result += str(bool_val)+","
+            if bool_val:
+                val = PrepareArff.value_true
+            else:
+                val = PrepareArff.value_empty
+            result += val+","
         result = result[0:-1]
+        return result
+
+    @staticmethod
+    def write_boolean_val_line(file_des,val_array):
+        result = PrepareArff.get_boolean_val_line(val_array)
         file_des.write(result+"\n")

@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="116cf709-69e8-4c02-a58d-47259f912ed7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prepare/log_debug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/one_day_logs.arff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prepare/one_day_logs.arff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prepare/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prepare/out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prepare/preparearff.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prepare/preparelogs.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/prepare/testalgo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statisticlog/testdb/testalchemy.db" afterPath="$PROJECT_DIR$/statisticlog/testdb/testalchemy.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rulesengine/kbtag" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulesengine/knowledgebase" afterPath="$PROJECT_DIR$/rulesengine/knowledgebase" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulesengine/parsefacts.py" afterPath="$PROJECT_DIR$/rulesengine/parsefacts.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/parsekbtest.py" afterPath="$PROJECT_DIR$/tests/parsekbtest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prepare/preparearff.py" afterPath="$PROJECT_DIR$/prepare/preparearff.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prepare/preparelogs.py" afterPath="$PROJECT_DIR$/prepare/preparelogs.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulesengine/rulesengine.py" afterPath="$PROJECT_DIR$/rulesengine/rulesengine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statisticlog/sqlalchemytest.py" afterPath="$PROJECT_DIR$/statisticlog/sqlalchemytest.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="logprepro.iws" />
@@ -41,37 +35,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="knowledgebase" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rulesengine/knowledgebase">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="12" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="252">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preparelogs.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="preparelogs.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prepare/preparelogs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="54" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.59511346" vertical-offset="901" max-vertical-offset="1512">
+            <state line="33" column="18" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1782">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testalgo.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prepare/testalgo.py">
+      <file leaf-file-name="databaseSchema.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statisticlog/databaseSchema.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="13" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0" vertical-offset="846" max-vertical-offset="954">
+            <state line="121" column="40" selection-start="3542" selection-end="3542" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2322">
+              <folding>
+                <element signature="e#24#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parsekbtest.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/parsekbtest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.53333336" vertical-offset="0" max-vertical-offset="486">
+              <folding>
+                <element signature="e#23#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sqlquery" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statisticlog/sqlquery">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="163" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preparearff.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prepare/preparearff.py">
+      <file leaf-file-name="sqlalchemytest.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statisticlog/sqlalchemytest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="33" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0" vertical-offset="333" max-vertical-offset="1062">
+            <state line="42" column="16" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044">
               <folding />
             </state>
           </provider>
@@ -80,7 +87,43 @@
       <file leaf-file-name="parsefacts.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rulesengine/parsefacts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="16" selection-start="1336" selection-end="1336" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1152">
+            <state line="60" column="31" selection-start="1845" selection-end="1845" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logmetric.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statisticlog/logmetric.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="34" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="576">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compresslog.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statisticlog/compresslog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="124" column="51" selection-start="3807" selection-end="3988" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="2304">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rulesengine.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rulesengine/rulesengine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="131" column="33" selection-start="3760" selection-end="3760" vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="2466">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataschema.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rulesengine/dataschema.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="31" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
               <folding />
             </state>
           </provider>
@@ -104,22 +147,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/statisticlog/testdb/sqlquery" />
-        <option value="$PROJECT_DIR$/statisticlog/compresslog.py" />
         <option value="$PROJECT_DIR$/rulesengine/rules" />
         <option value="$PROJECT_DIR$/rulesengine/parserules.py" />
         <option value="$PROJECT_DIR$/rulesengine/DataSchema.py" />
         <option value="$PROJECT_DIR$/tests/logseqmatchertest.py" />
-        <option value="$PROJECT_DIR$/tests/parsekbtest.py" />
         <option value="$PROJECT_DIR$/rulesengine/dataschema.py" />
         <option value="$PROJECT_DIR$/statisticlog/sqlalchemytest.py" />
         <option value="$PROJECT_DIR$/tests/rulefiltertest.py" />
+        <option value="$PROJECT_DIR$/prepare/testalgo.py" />
+        <option value="$PROJECT_DIR$/rulesengine/parsefacts.py" />
+        <option value="$PROJECT_DIR$/rulesengine/konwledgebase2" />
+        <option value="$PROJECT_DIR$/prepare/preparearff.py" />
+        <option value="$PROJECT_DIR$/prepare/preparelogs.py" />
         <option value="$PROJECT_DIR$/rulesengine/rulesengine.py" />
         <option value="$PROJECT_DIR$/rulesengine/knowledgebase" />
-        <option value="$PROJECT_DIR$/rulesengine/parsefacts.py" />
-        <option value="$PROJECT_DIR$/prepare/preparelogs.py" />
-        <option value="$PROJECT_DIR$/prepare/testalgo.py" />
-        <option value="$PROJECT_DIR$/prepare/preparearff.py" />
+        <option value="$PROJECT_DIR$/statisticlog/databaseSchema.py" />
+        <option value="$PROJECT_DIR$/tests/parsekbtest.py" />
       </list>
     </option>
   </component>
@@ -239,35 +282,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="statisticlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rulesengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prepare" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -285,6 +314,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rulesengine" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/statisticlog" />
     </key>
@@ -304,30 +336,6 @@
       <module name="logprepro" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/statisticlog/sqlalchemytest.py" />
       <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in parsekbtest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="logprepro" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/parsekbtest.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
@@ -391,6 +399,24 @@
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="parsefacts" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rulesengine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="logprepro" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rulesengine/parsefacts.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -542,18 +568,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in logseqmatchertest" />
       <item index="1" class="java.lang.String" itemvalue="Python.sqlalchemytest" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in parsekbtest" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in rulefiltertest" />
-      <item index="4" class="java.lang.String" itemvalue="Python.preparelogs" />
-      <item index="5" class="java.lang.String" itemvalue="Python.testalgo" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in rulefiltertest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.preparelogs" />
+      <item index="4" class="java.lang.String" itemvalue="Python.testalgo" />
+      <item index="5" class="java.lang.String" itemvalue="Python.parsefacts" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.preparelogs" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testalgo" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in rulefiltertest" />
-        <item index="3" class="java.lang.String" itemvalue="Python.sqlalchemytest" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in parsekbtest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.parsefacts" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testalgo" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in rulefiltertest" />
+        <item index="4" class="java.lang.String" itemvalue="Python.sqlalchemytest" />
       </list>
     </recent_temporary>
   </component>
@@ -585,17 +611,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1282" height="774" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980111" sideWeight="0.52682924" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.52836305" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.74471545" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398374" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4703125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25528455" sideWeight="0.24184567" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53170735" sideWeight="0.75815433" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -646,77 +672,14 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/statisticlog/stringmetric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statisticlog/sqlquery">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="163" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="258" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/logseqmatchertest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="33" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="882" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/statisticlog/sqlalchemytest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="16" selection-start="1396" selection-end="1396" vertical-scroll-proportion="1.040678" vertical-offset="341" max-vertical-offset="1044" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/parsekbtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="23" selection-end="759" vertical-scroll-proportion="1.281356" vertical-offset="0" max-vertical-offset="486" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/rulefiltertest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="31" selection-start="247" selection-end="247" vertical-scroll-proportion="0.06101695" vertical-offset="108" max-vertical-offset="936" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rulesengine/dataschema.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="174" selection-end="174" vertical-scroll-proportion="0.30508474" vertical-offset="0" max-vertical-offset="295" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statisticlog/databaseSchema.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="36" selection-start="3122" selection-end="3122" vertical-scroll-proportion="0.4680851" vertical-offset="1686" max-vertical-offset="2322" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statisticlog/logmetric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="34" selection-start="379" selection-end="379" vertical-scroll-proportion="-0.19557196" vertical-offset="305" max-vertical-offset="576" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rulesengine/rulesengine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="38" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.73220336" vertical-offset="918" max-vertical-offset="1494" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statisticlog/compresslog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="51" selection-start="3807" selection-end="3988" vertical-scroll-proportion="0.5116279" vertical-offset="2100" max-vertical-offset="2412">
-          <folding>
-            <element signature="e#24#61#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rulesengine/knowledgebase">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rulesengine/parsefacts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="16" selection-start="1336" selection-end="1336" vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1152">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/prepare/testalgo.py">
@@ -728,15 +691,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prepare/preparearff.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="33" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0" vertical-offset="333" max-vertical-offset="1062">
+        <state line="58" column="45" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.0" vertical-offset="907" max-vertical-offset="1206">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rulesengine/knowledgebase">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="26" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rulesengine/kbtag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticlog/sqlquery">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="163" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticlog/logmetric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="34" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticlog/compresslog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="51" selection-start="3807" selection-end="3988" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="2304">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rulesengine/dataschema.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="31" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rulesengine/rulesengine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="33" selection-start="3760" selection-end="3760" vertical-scroll-proportion="0.0" vertical-offset="2192" max-vertical-offset="2466">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/prepare/preparelogs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="54" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.59511346" vertical-offset="901" max-vertical-offset="1512">
+        <state line="33" column="18" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1782">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rulesengine/parsefacts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="31" selection-start="1845" selection-end="1845" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticlog/sqlalchemytest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="16" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="1044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticlog/databaseSchema.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="40" selection-start="3542" selection-end="3542" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2322">
+          <folding>
+            <element signature="e#24#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/parsekbtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.53333336" vertical-offset="0" max-vertical-offset="486">
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

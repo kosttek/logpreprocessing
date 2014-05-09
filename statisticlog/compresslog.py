@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 __author__ = 'kosttek'
 
 from logmetric import SequenceMatcher
@@ -25,7 +26,7 @@ class CompressLog():
 
         #raw logs alre without numbers
         log = self.removeNumsAfterEqualityChar(log)
-
+        log = log.replace(",", " ")
         #find tag
         tag_obj = self.checkIfTagExistAndReturn(tag_str)
         if tag_obj == None:
@@ -34,6 +35,7 @@ class CompressLog():
         # check logs for same
         for key_compressedlog in tag_obj.compressedlogs:
             key = key_compressedlog.clogname
+
             seq = SequenceMatcher(key,log)
             if seq.ratio() >= CompressLog.compare_ration:
                 isSame = key_compressedlog.compareAndAddDifferences(seq.different_words)
@@ -65,24 +67,26 @@ class CompressLog():
             splitedlog[index] = sign
         return " ".join(splitedlog)
 
-    def parseLog(self,log):
+    def parseLog(self,log_):
         '''
         03-28 15:43:19.225 W/ActivityManager(  341): Unable to start service Intent { cmp=com.aware/.Applications }: not found
         '''
-        log_words_tag = log.split(":",3)
+        log_words_tag = log_.split(":",2)
         #remorve begining buffers token
         if len(log_words_tag) == 1:
             return [None,None,None]
 
-        log = log_words_tag[3].rstrip('\n').rstrip('\r')
+        log = log_words_tag[2][log_words_tag[2].index(')')+2:].rstrip('\n').rstrip('\r')
 
         sec_and_tag = log_words_tag[2].split(' ',1);
         tag_temp = sec_and_tag[1]
-        tag = tag_temp[:tag_temp.index('(')]
-
+        tag = tag_temp[:tag_temp.index('(')].rstrip(" ")
         date = self.getDate(log_words_tag[0],log_words_tag[1],sec_and_tag[0])
 
-        return [tag,log,date]
+        #decode to utf-8
+        tag_out = tag.decode('utf-8')
+        log_out = log.decode('utf-8')
+        return [tag_out, log_out, date]
 
     year = 2014
     def getDate(self,date_hour, minutes, sec_milisec):
@@ -102,8 +106,18 @@ class CompressLog():
         result = re.sub("=(\d+)|=\{([0-9, ])+\}","=",log)
         return result
 
+    def parse_logs_to_database(self, log_file_path, database_file_path):
+        log_file = open(log_file_path)
+        for log_line in log_file:
+            self.add(log_line)
+        engine = create_engine('sqlite:///'+database_file_path, echo=True)
+        Session = sessionmaker(bind=engine)
+        session = Session()
+        databaseSchema.Base.metadata.create_all(engine)
 
-
+        for tag in self.taglist:
+            session.add(tag)
+        session.commit()
 
 if __name__ == "__main__":
     compres = CompressLog()
