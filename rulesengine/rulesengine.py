@@ -102,10 +102,12 @@ class RuleEngine():
     def default_rawlog(self,rawlog):
         return self.getRawLogOut(rawlog)
 
+    def default_remove(self,rawlog):
+        return None
+
 #rules
 #extend
 #removetag
-
 
     def extend_check(self,rawlog,factlist):
         return self.checkCompressedLog(rawlog,factlist)
@@ -130,3 +132,9 @@ class RuleEngine():
 
     def leavetagfromtag(self,rawlog):
         return self.getTagLogOut(rawlog)
+
+    def notremoveclog_check(self,rawlog,factlist):
+        return self.checkCompressedLog(rawlog,factlist)
+
+    def notremoveclog(self,rawlog):
+        return self.getCompressedLogOut(rawlog)

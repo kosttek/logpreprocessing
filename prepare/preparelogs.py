@@ -89,9 +89,10 @@ class PrepareLogsFromDB():
 if __name__ == '__main__':
     settings = dict()
     settings["clog"]=["knowledgebase","one_day_logs"]
+    settings["remove"]=["rules2","one_day_logs_remove"]
     settings["tags"]=["kbtag","one_day_logs_tag"]
 
-    prepareLogs = PrepareLogsFromDB('testdb/testlogs.db','../rulesengine/'+settings['clog'][0])
+    prepareLogs = PrepareLogsFromDB('../statisticlog/testdb/testlogs.db','../rulesengine/'+settings['remove'][0])
     #for log in prepareLogs.logset_list:
     #    print log
     #prepareLogs.reduceLoglist(0.2)
@@ -101,4 +102,4 @@ if __name__ == '__main__':
 
     _preparearff = preparearff.PrepareArff()
 
-    _preparearff.prepare_bool_association_file(settings['clog'][1],prepareLogs.logset_list,prepareLogs.timewindowdata)
+    _preparearff.prepare_bool_association_file(settings['remove'][1],prepareLogs.logset_list,prepareLogs.timewindowdata)

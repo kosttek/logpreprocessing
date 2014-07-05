@@ -4,16 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/statisticlog/compresslog.py" line="114" mnemonic="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="116cf709-69e8-4c02-a58d-47259f912ed7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rulesengine/kbtag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulesengine/knowledgebase" afterPath="$PROJECT_DIR$/rulesengine/knowledgebase" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulesengine/parsefacts.py" afterPath="$PROJECT_DIR$/rulesengine/parsefacts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/parsekbtest.py" afterPath="$PROJECT_DIR$/tests/parsekbtest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prepare/preparearff.py" afterPath="$PROJECT_DIR$/prepare/preparearff.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prepare/preparelogs.py" afterPath="$PROJECT_DIR$/prepare/preparelogs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rulesengine/rulesengine.py" afterPath="$PROJECT_DIR$/rulesengine/rulesengine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="116cf709-69e8-4c02-a58d-47259f912ed7" name="Default" comment="" />
     <ignored path="logprepro.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +29,16 @@
       <file leaf-file-name="preparelogs.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prepare/preparelogs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="18" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1782">
+            <state line="33" column="0" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="1424" max-vertical-offset="1872">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preparearff.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prepare/preparearff.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="0" selection-start="1921" selection-end="1921" vertical-scroll-proportion="0.0" vertical-offset="1033" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -47,18 +47,16 @@
       <file leaf-file-name="databaseSchema.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statisticlog/databaseSchema.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="40" selection-start="3542" selection-end="3542" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2322">
-              <folding>
-                <element signature="e#24#57#0" expanded="true" />
-              </folding>
+            <state line="121" column="0" selection-start="3556" selection-end="3556" vertical-scroll-proportion="0.0" vertical-offset="2178" max-vertical-offset="2340">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parsekbtest.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="parsekbtest.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/parsekbtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.53333336" vertical-offset="0" max-vertical-offset="486">
+            <state line="12" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
               </folding>
@@ -66,19 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sqlquery" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/statisticlog/sqlquery">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="163" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="sqlalchemytest.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statisticlog/sqlalchemytest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="16" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044">
+            <state line="42" column="16" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="1152">
               <folding />
             </state>
           </provider>
@@ -87,7 +76,7 @@
       <file leaf-file-name="parsefacts.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rulesengine/parsefacts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="31" selection-start="1845" selection-end="1845" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+            <state line="60" column="31" selection-start="1845" selection-end="1845" vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="1188">
               <folding />
             </state>
           </provider>
@@ -102,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compresslog.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="compresslog.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/statisticlog/compresslog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="51" selection-start="3807" selection-end="3988" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="2304">
+            <state line="124" column="38" selection-start="3807" selection-end="3988" vertical-scroll-proportion="0.17766498" vertical-offset="2054" max-vertical-offset="2556">
               <folding />
             </state>
           </provider>
@@ -123,7 +112,7 @@
       <file leaf-file-name="dataschema.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rulesengine/dataschema.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="31" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
+            <state line="5" column="31" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="198">
               <folding />
             </state>
           </provider>
@@ -198,6 +187,96 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statisticlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rulesengine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prepare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logprepro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Default">
           <PATH>
@@ -250,54 +329,6 @@
             <PATH_ELEMENT USER_OBJECT="logprepro">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logprepro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statisticlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -566,12 +597,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in logseqmatchertest" />
-      <item index="1" class="java.lang.String" itemvalue="Python.sqlalchemytest" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in rulefiltertest" />
-      <item index="3" class="java.lang.String" itemvalue="Python.preparelogs" />
-      <item index="4" class="java.lang.String" itemvalue="Python.testalgo" />
-      <item index="5" class="java.lang.String" itemvalue="Python.parsefacts" />
+      <item index="0" class="java.lang.String" itemvalue="Python.sqlalchemytest" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in rulefiltertest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.preparelogs" />
+      <item index="3" class="java.lang.String" itemvalue="Python.testalgo" />
+      <item index="4" class="java.lang.String" itemvalue="Python.parsefacts" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in logseqmatchertest" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -617,10 +648,10 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980111" sideWeight="0.52682924" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.74471545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.74554294" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398374" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25528455" sideWeight="0.24184567" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25445706" sideWeight="0.24184567" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53170735" sideWeight="0.75815433" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -646,9 +677,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980111" sideWeight="0.52682924" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.52682924" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47317073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47317073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -689,25 +720,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prepare/preparearff.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="45" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.0" vertical-offset="907" max-vertical-offset="1206">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rulesengine/knowledgebase">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="450">
-          <folding />
-        </state>
+        <state line="9" column="26" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="450" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rulesengine/kbtag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <folding />
-        </state>
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statisticlog/sqlquery">
@@ -724,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/statisticlog/compresslog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="51" selection-start="3807" selection-end="3988" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="2304">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rulesengine/dataschema.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="31" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
@@ -741,13 +754,6 @@
     <entry file="file://$PROJECT_DIR$/rulesengine/rulesengine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="131" column="33" selection-start="3760" selection-end="3760" vertical-scroll-proportion="0.0" vertical-offset="2192" max-vertical-offset="2466">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prepare/preparelogs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="18" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1782">
           <folding />
         </state>
       </provider>
@@ -768,19 +774,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statisticlog/databaseSchema.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="40" selection-start="3542" selection-end="3542" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2322">
-          <folding>
-            <element signature="e#24#57#0" expanded="true" />
-          </folding>
+        <state line="121" column="0" selection-start="3556" selection-end="3556" vertical-scroll-proportion="0.0" vertical-offset="2178" max-vertical-offset="2340">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/parsekbtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.53333336" vertical-offset="0" max-vertical-offset="486">
+        <state line="12" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
           <folding>
             <element signature="e#23#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prepare/preparelogs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="1424" max-vertical-offset="1872">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prepare/preparearff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="1921" selection-end="1921" vertical-scroll-proportion="0.0" vertical-offset="1033" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statisticlog/compresslog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="38" selection-start="3807" selection-end="3988" vertical-scroll-proportion="0.17766498" vertical-offset="2054" max-vertical-offset="2556">
+          <folding />
         </state>
       </provider>
     </entry>
