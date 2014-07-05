@@ -1,0 +1,4 @@
+default("remove")
+extend(" Start proc @@@ for broadcast @@@ pid= uid= gids=")
+extend(" Start proc @@@ for service @@@ pid= uid= gids=")
+notremoveclog(" Start proc @@@ for content provider @@@ pid= uid= gids=")
