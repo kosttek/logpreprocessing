@@ -1,6 +1,7 @@
 __author__ = 'kosttek'
 
 from parsefacts import  ParseFacts
+import re
 class RuleEngine():
 
     def __init__(self):
@@ -21,10 +22,6 @@ class RuleEngine():
                 self.facts[fact.factname] = list()
             self.facts[fact.factname].append(fact)
 
-
-
-
-
     def filterLog(self,rawlog):
         method = self.getDefaultBehaviourMethod()
         for key in self.facts:
@@ -32,12 +29,17 @@ class RuleEngine():
             if method_check(rawlog,self.facts[key]):
                 method = getattr(self,key)
                 break
-
         return method(rawlog)
 
     def checkTemplate(self,rawlog,factlist,getmethod):
         for fact in factlist:
             if fact.target.lstrip().rstrip() == getmethod(rawlog).rstrip().lstrip():
+                return True
+        return False
+
+    def checkRegExpTemplate(self,rawlog,factlist,getmethod):
+        for fact in factlist:
+            if re.match(fact.target, getmethod(rawlog)):
                 return True
         return False
 
@@ -71,6 +73,9 @@ class RuleEngine():
 
     def checkCompressedLog(self,rawlog,factlist):
         return self.checkTemplate(rawlog,factlist,self.getClognameFromRawlog)
+
+    def checkRegExpCompressedLog(self,rawlog,factlist):
+        return self.checkRegExpTemplate(rawlog,factlist,self.getClognameFromRawlog)
 
     def checkTag(self,rawlog,factlist):
         return self.checkTemplate(rawlog,factlist,self.getTagFromRawlog)
@@ -138,3 +143,15 @@ class RuleEngine():
 
     def notremoveclog(self,rawlog):
         return self.getCompressedLogOut(rawlog)
+
+    def clogregexp_check(self,rawlog,factlist):
+        return self.checkRegExpCompressedLog(rawlog,factlist)
+
+    def clogregexp(self,rawlog):
+        return self.getCompressedLogOut(rawlog)
+
+    def rawlogregexp_check(self,rawlog,factlist):
+        return self.checkRegExpCompressedLog(rawlog,factlist)
+
+    def rawlogregexp(self,rawlog):
+        return self.getRawLogOut(rawlog)

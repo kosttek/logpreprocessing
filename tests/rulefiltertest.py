@@ -13,7 +13,6 @@ class TestRuleFilter(unittest.TestCase):
         ps = ParseFacts()
         ps.parseLine("extend(\"compressed @@@\")")
 
-
         rl = RuleEngine()
         rl.initFactsDict(ps)
 
@@ -43,4 +42,34 @@ class TestRuleFilter(unittest.TestCase):
         self.assertEqual("compressed b",logmessage2)
         self.assertEqual("compressed2 @@@",logmessage3)
         self.assertEqual("compressed2 @@@",logmessage4)
+
+    def test_regexp(self):
+        ps = ParseFacts()
+        ps.parseLine("default(\"remove\")")
+        ps.parseLine("clogregexp(\" Start proc.*\")")
+
+        rl = RuleEngine()
+        rl.initFactsDict(ps)
+
+        clog_false_str = " End pro @@@ @@@"
+        clog_true_str = " Start proc @@@ @@@"
+
+        rawlog_false = self.create_log_and_clog(" End pro blabla bla", clog_false_str,[3,4])
+        rawlog_true = self.create_log_and_clog(" Start proc blabla bla",  clog_true_str,[3,4])
+
+        none_result = rl.filterLog(rawlog_false)
+        [date2,logmessage_true] = rl.filterLog(rawlog_true)
+
+        self.assertEqual(None,none_result)
+        self.assertEqual(logmessage_true,logmessage_true)
+
+
+
+    def create_log_and_clog(self, log, clog_str, diff_words_arr, date=datetime.datetime.now()):
+        rawlog = RawLog(date, log)
+        clog1 = CompressedLog(clog_str)
+        clog1.setDiffWordsSet(diff_words_arr)
+        clog1.rawlogs.append(rawlog)
+        return rawlog
+
 

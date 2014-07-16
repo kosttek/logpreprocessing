@@ -25,7 +25,8 @@ class CompressLog():
             return
 
         #raw logs alre without numbers
-        log = self.removeNumsAfterEqualityChar(log)
+        #log = self.removeNumsAfterEqualityChar(log)
+        log = self.removeNumsBiggerThanTwoDigits(log)
         log = log.replace(",", " ")
         #find tag
         tag_obj = self.checkIfTagExistAndReturn(tag_str)
@@ -104,6 +105,10 @@ class CompressLog():
     def removeNumsAfterEqualityChar(self,log):
         '''replace every number witch start with '=' sign by '='(secound argument) or '|' all brackets {} with numbers in it separated by commma ',' '''
         result = re.sub("=(\d+)|=\{([0-9, ])+\}","=",log)
+        return result
+
+    def removeNumsBiggerThanTwoDigits(self, log):
+        result = re.sub("(\d\d+)|\{([0-9, ])+\}|=\[([0-9, ])+\]","",log)
         return result
 
     def parse_logs_to_database(self, log_file_path, database_file_path):
